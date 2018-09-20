@@ -9,6 +9,7 @@ EXAMPLES
  2000/1/1 and 2001/1/1 should return 366 days, 8784 hours, or 527040 minutes
  1900/1/1 and 1901/1/1 should return 365 days, 8760 hours, or 525600 minutes
  2000/1/1 and 2000/1/1 should return 0 days, 0 hours, or 0 minutes
+ 2000/1/1 and 2000/12/31 should return 365 days, 8760 hours, or 525600 minutes
  1900/1/1 and 1999/12/31 should return  36523 days, 876552 hours, or 52593120 minutes
 
  */
