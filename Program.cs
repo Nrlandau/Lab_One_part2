@@ -20,10 +20,13 @@ namespace Project_Lab_1_p2
     {
         static void Main(string[] args)
         {
+            //Variable declaration
             int numberOfDays = 0;
             int year1 , year2;
             int month1, month2;
             int day1, day2;
+            //Input
+            //First Date
             System.Console.WriteLine("Input the first year:");
             year1 = int.Parse(System.Console.ReadLine());
 
@@ -42,7 +45,7 @@ namespace Project_Lab_1_p2
                 System.Console.WriteLine("INPUT A VALID DAY(1-{0}):",getDaysInMonth(month1,year1));
                 day1 =  int.Parse(System.Console.ReadLine());
             }
-
+            //Second Date
             System.Console.WriteLine("Input the second year:");
             year2 = int.Parse(System.Console.ReadLine());
 
@@ -62,8 +65,10 @@ namespace Project_Lab_1_p2
                 day2 =  int.Parse(System.Console.ReadLine());
             }
             
+            //Calculate
             numberOfDays = calcDays(year1, month1, day1, year2, month2, day2);
 
+            //Output
             System.Console.WriteLine("The difference between {0}/{1}/{2} and {3}/{4}/{5} is {6} days, {7} hours, or {8} minutes.", year1, month1,day1, year2, month2, day2, numberOfDays, numberOfDays * 24, numberOfDays * 24 * 60);
             
 
@@ -91,7 +96,7 @@ namespace Project_Lab_1_p2
             }
         }
 
-        static int calcDays(int year1, int month1, int day1, int year2, int month2, int day2) 
+        static int calcDays(int year1, int month1, int day1, int  year2, int month2, int day2) // Return the difference between two dates.
         {
             if(year2 < year1 || year2 == year1 && (month2 < month1 || month2 == month1 && (day2< day1))) //the function only works if the first date is before the second so it calls itself with the flipped dates.
             {
